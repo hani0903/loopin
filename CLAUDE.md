@@ -96,9 +96,12 @@ import { cn } from "../../../shared/lib/utils";
 
 ## Design System
 
-UI·CSS·컴포넌트 작업 시 `.claude/skills/design-system/` skill 트리거. 핵심 원칙: **No-Line**(선 대신 surface-container 계층으로 구분), **Tonal Depth**(5단계 surface-container 계층), motion은 `easing-standard(0.2,0,0,1)` + 360ms 이하 고수.
-금지 패턴은 `docs/design-system/dont.md` 참조. PostToolUse 훅(`scripts/check-design-system.js`)이 `*.tsx`/`*.ts`/`*.css` 수정 시 hex 하드코딩·강한 그림자·임의 픽셀·bounce 이징 등을 자동 감지.
-토큰 상세는 `docs/design-system/` — 컴포넌트별 규칙은 `05-components/`, `/design-check` 스킬로 diff 단위 리뷰 가능.
+UI·CSS·컴포넌트 작업 시 `design-system` skill을 트리거한다. 작업 후 `/design-check`로 diff 리뷰. PostToolUse 훅(`scripts/check-design-system.js`)이 `*.tsx`/`*.ts`/`*.css` 수정 시 위반 패턴을 자동 감지.
+
+- 진입점: `docs/design-system/README.md`
+- 컬러 토큰: `docs/design-system/01-tokens-color.md`
+- 컴포넌트: `docs/design-system/05-components/`
+- 금지 규칙: `docs/design-system/dont.md`
 
 ## Code Style
 
